@@ -34,13 +34,22 @@ fi
 for i in `seq 1 20` 
 do 
 	echo $i >> $file
+	echo $i >> orig
 done
 
 
 # Use sed to insert the line
 sed -i "${line}i$msg" $file
 
+# Another method on constrained file system
+# sed -e "${line}i$msg" > ../../tmp
+# cat ../../tmp > $file
+# rm ../../tmp
 
-# Inform user and quit
-echo "Line inserted"
+
+# Show difference with original file, remove it and quit
+echo "Result (diff):"
+diff -c orig $file
+rm orig
+
 

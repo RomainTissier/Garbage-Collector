@@ -1,0 +1,1 @@
+//TODO IsEven with & operator
