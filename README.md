@@ -5,10 +5,11 @@ Misc piece of code
     - InsertLine : insert a line in a file 
 
 ## C 
-    - Args : minimal C arguments parser
-    - DataStructure : misc data structure 
-    - Misc : misc functions
+    - Args : Minimal C arguments parser
+    - DataStructure : Misc data structures 
+    - Misc : Misc functions
     - Shell : Execute Shell function in C
+    - Types : Print current machines types sizes 
 
 ## Python
     - PrimeFactor : decompose an integer into prime factors 
