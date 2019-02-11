@@ -16,8 +16,13 @@ args: args.o
 #
 # Generic .o compilation rule
 #
+
+WARNINGS = -Wall	# Add a lot of warning, but not all !
+WARNINGS += -Werror  	# Turn warnings into errors
+WARNINGS += -Wshadow	# Add a warnings if a variable override another variable
+
 %.o: %.c
-	gcc -o $@ -c $<
+	gcc -o $@ ${WARNINGS} -c $<
 #
 # Classic clean target
 #
