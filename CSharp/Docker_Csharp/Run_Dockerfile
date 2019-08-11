@@ -1,0 +1,6 @@
+# Base image
+FROM csharp_custom_env
+
+# Add the C# source code
+ADD hello.cs /
+

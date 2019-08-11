@@ -1,0 +1,9 @@
+# Base image
+FROM debian:buster
+
+# Install debian package for C#
+RUN apt-get update
+RUN apt-get install -y apt-utils 
+RUN apt-get upgrade -y
+RUN apt-get install mono-complete -y
+
