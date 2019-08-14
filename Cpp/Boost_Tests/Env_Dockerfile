@@ -1,0 +1,14 @@
+# Base image
+FROM debian:buster
+
+# Block apt-get interraction 
+ENV DEBIAN_FRONTEND noninteractive
+
+# Install debian package for C++/Boost
+RUN apt-get update
+RUN apt-get install -y apt-utils 
+RUN apt-get upgrade -y
+RUN apt-get install -y g++
+RUN apt-get install -y make
+RUN apt-get install -y libboost-test-dev
+

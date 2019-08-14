@@ -1,0 +1,9 @@
+# Base image
+FROM boost_custom_env
+
+# Add the C++ source code
+ADD main.cpp /
+ADD Makefile /
+ADD test1.cpp /
+ADD test2.cpp /
+
