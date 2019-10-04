@@ -1,0 +1,24 @@
+# Base image
+FROM debian:buster
+
+# Block apt-get interraction
+ENV DEBIAN_FRONTEND noninteractive
+
+# Install some debian packages
+RUN apt-get update
+RUN apt-get install -y apt-utils
+RUN apt-get upgrade -y
+RUN apt-get install -y firefox-esr
+RUN apt-get install -y python3
+RUN apt-get install -y python3-pip
+RUN apt-get install -y wget
+
+# Update pip and install web scraping tool
+RUN pip3 install --upgrade pip
+RUN pip3 install selenium
+
+# Install geckodriver dependencies
+RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
+RUN tar -xvzf geckodriver-v0.24.0-linux64.tar.gz
+RUN chmod +x geckodriver
+RUN mv geckodriver /usr/bin/
