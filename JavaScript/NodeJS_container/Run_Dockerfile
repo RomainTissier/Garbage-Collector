@@ -1,0 +1,9 @@
+# Base image
+FROM minimal_nodejs_env
+
+# Add source code
+ADD index.js /opt/www/
+
+# Expose port
+EXPOSE 8081
+

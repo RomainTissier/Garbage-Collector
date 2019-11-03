@@ -1,0 +1,17 @@
+# Base image
+FROM node:latest
+
+# Block apt-get interraction
+ENV DEBIAN_FRONTEND noninteractive
+
+WORKDIR /opt/www/
+
+# Update debian packages
+RUN apt-get update
+RUN apt-get install -y apt-utils
+RUN apt-get upgrade -y
+
+# Add custom modules
+ADD package.json /opt/www/
+RUN npm install express
+
