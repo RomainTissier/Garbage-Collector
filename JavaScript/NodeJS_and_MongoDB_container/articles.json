@@ -1,0 +1,14 @@
+{
+	"_id": {
+		"$oid": "5dcef8af1c276339aca4d77a"
+	},
+	"title": "Title",
+	"text": "Magic text"
+}
+{
+	"_id": {
+		"$oid": "5dcef8af1c276339aca4d77b"
+	},
+	"title": "Title2",
+	"text": "Magic text2"
+}

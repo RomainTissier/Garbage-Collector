@@ -1,0 +1,12 @@
+# Base image
+FROM minimal_nodejs_and_mongodb_env
+
+# Add source code
+ADD index.js /opt/www/
+ADD articles.json /opt/www/
+
+# Start MongoDB
+RUN mkdir /opt/www/mongodb
+
+# Expose port
+EXPOSE 8081
