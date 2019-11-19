@@ -3,12 +3,14 @@
 		"$oid": "5dcef8af1c276339aca4d77a"
 	},
 	"title": "Title",
-	"text": "Magic text"
+	"text": "Magic text",
+	"view": 27
 }
 {
 	"_id": {
 		"$oid": "5dcef8af1c276339aca4d77b"
 	},
 	"title": "Title2",
-	"text": "Magic text2"
+	"text": "Magic text2",
+	"view": 42
 }
