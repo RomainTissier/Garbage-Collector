@@ -2,6 +2,7 @@
 if [ $# -ne 1 ]
 then 
         echo "Usage : . ./cdwin.sh \"windows path\""
+        exit
 else 
 	tmp_1=$(echo "$1" | sed "s/\(.*\)\:/\l\1\//")
 	tmp_2=$(echo "$tmp_1" | sed "s/^/\/mnt\//")

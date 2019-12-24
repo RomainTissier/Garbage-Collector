@@ -3,7 +3,7 @@
 import sys
 
 
-def printC(enum_name, enum):
+def printC_enum(enum_name, enum):
     """
         Print the C "toString" function.
     """
@@ -22,6 +22,22 @@ def printC(enum_name, enum):
     print("}")
 
 
+def printC_flags(enum_name, enum):
+    """
+        Print the C "toString" function.
+    """
+    print("void print_"+enum_name+"_flags("+enum_name+" value)")
+    print("{")
+    print("        printf(\"Print "+enum_name+" flags for 0x%x :\\n\", value);")
+
+    for value in enum:
+        print("        if((value&"+value.rstrip()+") == "+value.rstrip()+") {")
+        print("                printf(\"    - "+value.rstrip()+"\\n\");")
+        print("        }")
+
+    print("}")
+
+
 if __name__ == '__main__':
     enum = []
     if len(sys.argv) == 3:
@@ -35,6 +51,7 @@ if __name__ == '__main__':
             enum.append(line)
 
         # Print the C "toString function"
-        printC(enum_name, enum)
+        printC_enum(enum_name, enum)
+        printC_flags(enum_name, enum)
     else:
         print("Usage : ./print_enum <enum_name> <input_file>")
