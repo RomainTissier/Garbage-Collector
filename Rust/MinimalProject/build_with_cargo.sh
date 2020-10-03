@@ -6,3 +6,6 @@ cargo clippy
 
 # Build
 cargo build
+
+# Generate doc
+cargo doc
