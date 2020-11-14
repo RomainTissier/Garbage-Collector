@@ -2,4 +2,5 @@
 name = "hello"
 version = "0.0.0"
 authors = ["RTi"]
+edition = "2018"
 
