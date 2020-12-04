@@ -10,5 +10,5 @@ cargo build
 # test
 cargo test
 
-# Generate doc
+# Test and generate doc
 cargo doc
