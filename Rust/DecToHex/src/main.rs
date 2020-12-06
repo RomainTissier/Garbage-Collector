@@ -45,7 +45,7 @@ fn main() {
     let args: Vec<String> = env::args().skip(1).collect();
 
     for arg in args {
-        match convert_uint_or_hex(arg) {
+        match convert_uint_or_hex(&arg) {
             Ok(n) => print!("{} ", n),
             Err(e) => panic!(e),
         };

@@ -38,11 +38,11 @@
 
 /// Convert a String from UInt to hex format OR from Hex to Int format
 ///
-/// Example 1:
+/// Example:
 /// ```
-/// let res = hex_uint_converter::convert_uint_or_hex(String::from("1")).unwrap();
+/// let res = hex_uint_converter::convert_uint_or_hex("1").unwrap();
 /// ```
-pub fn convert_uint_or_hex(str_to_parse: String) -> Result<String, String> {
+pub fn convert_uint_or_hex(str_to_parse: &str) -> Result<String, String> {
     if str_to_parse.contains("0x") {
         // Try to parse Hex to Int
         let formated_str = str_to_parse.trim_start_matches("0x");
@@ -73,16 +73,10 @@ pub fn convert_uint_or_hex(str_to_parse: String) -> Result<String, String> {
 
 #[test]
 fn basic_tests() {
-    assert_eq!(convert_uint_or_hex(String::from("1")).unwrap(), "0x1");
-    assert_eq!(convert_uint_or_hex(String::from("0x1")).unwrap(), "1");
-    assert_eq!(convert_uint_or_hex(String::from("0xF")).unwrap(), "15");
-    assert_eq!(convert_uint_or_hex(String::from("15")).unwrap(), "0xf");
-    assert_eq!(
-        convert_uint_or_hex(String::from("bad_value")).is_err(),
-        true
-    );
-    assert_eq!(
-        convert_uint_or_hex(String::from("0xbad_value")).is_err(),
-        true
-    );
+    assert_eq!(convert_uint_or_hex("1").unwrap(), "0x1");
+    assert_eq!(convert_uint_or_hex("0x1").unwrap(), "1");
+    assert_eq!(convert_uint_or_hex("0xF").unwrap(), "15");
+    assert_eq!(convert_uint_or_hex("15").unwrap(), "0xf");
+    assert_eq!(convert_uint_or_hex("bad_value").is_err(), true);
+    assert_eq!(convert_uint_or_hex("0xbad_value").is_err(), true);
 }
