@@ -24,6 +24,7 @@ g++ -c $1 \
 	-Wlogical-op \
 	-Wnull-dereference \
 	-Wuseless-cast \
+	-Warray-bounds \
 	-Wdouble-promotion \
 	-Weffc++
 
