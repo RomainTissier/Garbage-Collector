@@ -1,0 +1,6 @@
+[package]
+name = "vector_inheritance"
+version = "0.0.0"
+authors = ["RTi"]
+edition = "2018"
+
