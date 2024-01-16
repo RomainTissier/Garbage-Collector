@@ -53,4 +53,15 @@ Custom install of Linux
   ----------------
     * `startx`
     * Open terminal in order to execute setxkbmap fr
-
+  
+  Start wifi (nixos)
+  --------------------
+    * `sudo systemctl start wpa_supplicant`
+    * `wpa_cli`
+    * `scan`
+    * `add_network`
+        `-> 0`
+    * `set_network 0 ssid "MyWifi"`
+    * `set_network 0 psk "MyPassword"`
+    * `enable_network 0`
+        -> CTRL-EVENT-CONNECTED
