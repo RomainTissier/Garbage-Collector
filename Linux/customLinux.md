@@ -27,7 +27,15 @@ Custom install of Linux
     * `apt install vim` ou `apk add vim`
     * echo 'alias vi="vim"' >> .bashrc
 
+  Webbrowser
+  ------------
+    * links2 : minimal browser no javascript
+    * luakit : simple browser (interface like vim), handle simple javascript
+    * qutebrowser: simple browser (in python), handle simple javascript
+    * netsurf : very fast browser, no javascript
+
   Install Jwm alpine
+  --------------------
     * setup-xorg-base
     * apk add jwm
     * echo "exex jwm" > .xinitrc
