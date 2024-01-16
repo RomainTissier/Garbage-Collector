@@ -63,5 +63,9 @@ Custom install of Linux
         `-> 0`
     * `set_network 0 ssid "MyWifi"`
     * `set_network 0 psk "MyPassword"`
+
+  Configure keyboard (nixos)
+  ----------------------------
+    * `loadkeys fr`
     * `enable_network 0`
         -> CTRL-EVENT-CONNECTED
