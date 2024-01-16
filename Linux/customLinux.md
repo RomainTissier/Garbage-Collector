@@ -69,3 +69,18 @@ Custom install of Linux
     * `loadkeys fr`
     * `enable_network 0`
         -> CTRL-EVENT-CONNECTED
+
+  Configure partitions (from nixos installation guide)
+  ------------------------------------------------------
+    * parted /dev/sda -- mklabel msdos
+    * parted /dev/sda -- mkpart primary 1MB -8GB
+    * parted /dev/sda -- set 1 boot on
+    * parted /dev/sda -- mkpart primary linux-swap -8GB 100%
+    * mkfs.ext4 -L nixos /dev/sda1
+    * mkswap -L swap /dev/sda2
+    * mount /dev/disk/by-label/nixos /mnt
+    * swapon /dev/sda2
+  
+  Reminders / Notes on distro
+  -----------------------------
+    * NixOs: command line installation, simple wiki instruction, the configuration is handled by a text file: configuration.nix
