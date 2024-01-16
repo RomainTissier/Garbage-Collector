@@ -84,3 +84,4 @@ Custom install of Linux
   Reminders / Notes on distro
   -----------------------------
     * NixOs: command line installation, simple wiki instruction, the configuration is handled by a text file: configuration.nix, package management too slow on very old computers
+    * Crux: the manual compilation of linux kernel is slow with very old hardware.
