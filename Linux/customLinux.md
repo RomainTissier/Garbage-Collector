@@ -85,3 +85,16 @@ Custom install of Linux
   -----------------------------
     * NixOs: command line installation, simple wiki instruction, the configuration is handled by a text file: configuration.nix, package management too slow on very old computers
     * Crux: the manual compilation of linux kernel is slow with very old hardware.
+
+  Notes on void installation
+  ----------------------------
+  The order of package installation is very important:
+    * 1: xbps-install -Su void-repo-nonfree
+    * 2: xbps-install -Su linux-firmware-intel
+    * 3: xbps-install -Su mesa-dri
+    * 4: xbps-install -Su vulkan-loader
+    * 5: xbps-install -Su mesa-vulkan-intel
+    * 6: xbps-install -Su libva-intel-driver (warning: only for CPU before broadwell excluded)
+         xbps-install -Su intel-media-driver (after broadwell)
+    * 7: xbps-install -Su xorg
+    * 8: xbps-install -Su lxqt
