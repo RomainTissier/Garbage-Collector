@@ -98,3 +98,8 @@ The order of package installation is very important:
 * 6b: `xbps-install -Su intel-media-driver` (after broadwell)
 * 7: `xbps-install -Su xorg`
 * 8: `xbps-install -Su lxqt`
+
+Xorg/11
+---------
+* pacman -Syu xorg-server xf86-video-intel
+* pacman -Syu xorg-x11-xinit (provide startx)
