@@ -98,6 +98,7 @@ The order of package installation is very important:
 * 6b: `xbps-install -Su intel-media-driver` (after broadwell)
 * 7: `xbps-install -Su xorg`
 * 8: `xbps-install -Su lxqt`
+* Activate USB automount by enabling service: `ln -s /etc/sv/dbus /var/service/dbus`
 
 Xorg/11
 ---------
