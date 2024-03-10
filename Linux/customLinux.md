@@ -104,3 +104,19 @@ Xorg/11
 ---------
 * pacman -Syu xorg-server xf86-video-intel
 * pacman -Syu xorg-x11-xinit (provide startx)
+
+Lightweight env
+-----------------
+
+### Basic distribution install
+* Install minimal version of any distribution, without X server
+
+### TODO
+#### Network
+#### Graphical interface
+#### Usb automount
+#### Disk management
+#### Webbrowser
+#### Clipboard
+#### Sound
+#### Multi screen
