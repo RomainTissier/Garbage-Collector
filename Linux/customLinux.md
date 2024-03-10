@@ -171,6 +171,9 @@ Configuration:
 #### Terminal
 * `apt install stterm`
 
+#### File manager
+* `apt install pcmanfm`
+
 #### Usb automount
 * VoidLinux: Activate USB automount by enabling service `ln -s /etc/sv/dbus /var/service/dbus`
 
