@@ -88,16 +88,6 @@ Custom install of Linux
 
 Notes on void installation
 ----------------------------
-The order of package installation is very important:
-* 1: `xbps-install -Su void-repo-nonfree`
-* 2: `xbps-install -Su linux-firmware-intel`
-* 3: `xbps-install -Su mesa-dri`
-* 4: `xbps-install -Su vulkan-loader`
-* 5: `xbps-install -Su mesa-vulkan-intel`
-* 6a: `xbps-install -Su libva-intel-driver` (warning: only for CPU before broadwell excluded)
-* 6b: `xbps-install -Su intel-media-driver` (after broadwell)
-* 7: `xbps-install -Su xorg`
-* 8: `xbps-install -Su lxqt`
 * Activate USB automount by enabling service: `ln -s /etc/sv/dbus /var/service/dbus`
 
 
@@ -134,12 +124,26 @@ Lightweight env
 * Archlinux (example with intel driver)
   * `pacman -Syu xorg-server xf86-video-intel`
   * `pacman -Syu xorg-x11-xinit (provide startx)`
+* VoidLinux (the order of package installation is very important)
+  * 1: `xbps-install -Su void-repo-nonfree`
+  * 2: `xbps-install -Su linux-firmware-intel`
+  * 3: `xbps-install -Su mesa-dri`
+  * 4: `xbps-install -Su vulkan-loader`
+  * 5: `xbps-install -Su mesa-vulkan-intel`
+  * 6a: `xbps-install -Su libva-intel-driver` (warning: only for CPU before broadwell excluded)
+  * 6b: `xbps-install -Su intel-media-driver` (after broadwell)
+  * 7: `xbps-install -Su xorg`
 
 ### Desktop environment
 #### LxQt
+Installation:
 * Debian (too heavy):
   * `apt install lxqt-core`
-  * `echo "exec startlxqt" > ~/.xinitrc`
+* VoidLinux
+  * `xbps-install -Su lxqt`
+Common configuration:
+* `echo "exec startlxqt" > ~/.xinitrc`
+
 
 ### TODO
 #### Usb automount
