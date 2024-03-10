@@ -1,14 +1,6 @@
 Custom install of Linux
 =========================
 
-  Configure network
-  -------------------
-    * Alpine : 
-      ° During the installation : setup-interfaces 
-      ° Restart network service : /etc/init.d/networking restart
-      ° Increase retry (10 times) to connect wifi : 
-        - In /etc/network/interfaces add : udhcpc_opts -t 10
-        
   Manage repos 
   --------------
     * /etc/apk/repositories
@@ -17,10 +9,6 @@ Custom install of Linux
   Ajout utilisateur
   -------------------
     * adduser romain
-        
-  Configure ls
-  --------------
-    * echo 'alias ll="ls -al"' >> .bashrc
 
   Install vim 
   -------------
@@ -108,6 +96,7 @@ Lightweight env
 ### Shell configuration
 * .bashrc or .shrc
   * `alias ls='ls -G'`
+  * `alias ll="ls -al"`
   * Congigure PS1:
     ```
     PS1="whoami@hostname | sed 's/\..*//'"
@@ -146,6 +135,12 @@ Lightweight env
     * `reboot`
     * `nmtui`
     * `reboot`
+* Other manager
+  * Alpine
+    * During the installation : `setup-interfaces`
+    * Restart network service : `/etc/init.d/networking restart`
+    * Increase retry (10 times) to connect wifi : 
+      * - In `/etc/network/interfaces` add : `udhcpc_opts -t 10`
 
 ### X server
 Install
