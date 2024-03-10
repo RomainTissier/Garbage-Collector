@@ -110,9 +110,20 @@ Lightweight env
 
 ### Basic distribution install
 * Install minimal version of any distribution, without X server
-
+### Command line editor
+* `apt install vim`
+### Update to latest version
+* Debian
+  * Edit `/etc/apt/source.list` and replace version code by `testing`
+  * `apt update`
+  * `apt upgrade`
+  * `apt update`
+  * `apt dist-upgrade`
+  * `reboot`
+### Network
+* NetworkManager
+  * Debian
 ### TODO
-#### Network
 #### Graphical interface
 #### Usb automount
 #### Disk management
