@@ -180,6 +180,12 @@ Configuration:
 #### Webbrowser
 * `apt install firefox-esr`
 
+#### Sound
+* Debian
+  * `apt install pulseaudio`
+  * `apt install pamixer`
+  * `apt install pavucontroll`
+
 ### TODO
 #### Disk management
 #### Webbrowser
