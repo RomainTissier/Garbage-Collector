@@ -1,20 +1,5 @@
 Custom install of Linux
 =========================
-
-  Manage repos 
-  --------------
-    * /etc/apk/repositories
-    * /etc/apt/sources.list
-        
-  Ajout utilisateur
-  -------------------
-    * adduser romain
-
-  Install vim 
-  -------------
-    * `apt install vim` ou `apk add vim`
-    * echo 'alias vi="vim"' >> .bashrc
-
   Webbrowser
   ------------
     * links2 : minimal browser no javascript
@@ -24,7 +9,6 @@ Custom install of Linux
 
   Install Jwm alpine
   --------------------
-    * setup-xorg-base
     * apk add jwm
     * echo "exex jwm" > .xinitrc
     * cp /etc/system.jwmrc .jwmrc
@@ -57,17 +41,6 @@ Custom install of Linux
     * `loadkeys fr`
     * `enable_network 0`
         -> CTRL-EVENT-CONNECTED
-
-  Configure partitions (from nixos installation guide)
-  ------------------------------------------------------
-    * parted /dev/sda -- mklabel msdos
-    * parted /dev/sda -- mkpart primary 1MB -8GB
-    * parted /dev/sda -- set 1 boot on
-    * parted /dev/sda -- mkpart primary linux-swap -8GB 100%
-    * mkfs.ext4 -L nixos /dev/sda1
-    * mkswap -L swap /dev/sda2
-    * mount /dev/disk/by-label/nixos /mnt
-    * swapon /dev/sda2
   
   Reminders / Notes on distro
   -----------------------------
@@ -84,14 +57,28 @@ Lightweight env
 -----------------
 
 ### Basic distribution install
-* Install minimal version of any distribution, without X server
+Install minimal version of any distribution, without X server
+
+#### Configure partition (from nixos installation guide)
+* `parted /dev/sda -- mklabel msdos`
+* `parted /dev/sda -- mkpart primary 1MB -8GB`
+* `parted /dev/sda -- set 1 boot on`
+* `parted /dev/sda -- mkpart primary linux-swap -8GB 100%`
+* `mkfs.ext4 -L nixos /dev/sda1`
+* `mkswap -L swap /dev/sda2`
+* `mount /dev/disk/by-label/nixos /mnt`
+* `swapon /dev/sda2`
 
 ### Command line editor
 * Installation:
-  * `apt install vim`
+  * `apt install vim` (Debian)
+  * `apk add vim` (Alpine)
 * Configuration:
   * .bashrc: `alias vi='vim'`
   * .vimrc: `syntax on`  
+
+### Manage user
+* `useradd romain`
 
 ### Shell configuration
 * .bashrc or .shrc
@@ -126,6 +113,7 @@ Lightweight env
   * Update packages
     * `pkg update`
     * `pkg upgrade`
+* Alpine: source are configured in `/etc/apk/repositories`
 
 ### Network
 * NetworkManager (provide nmtui)
@@ -157,6 +145,7 @@ Install
   * 6a: `xbps-install -Su libva-intel-driver` (warning: only for CPU before broadwell excluded)
   * 6b: `xbps-install -Su intel-media-driver` (after broadwell)
   * 7: `xbps-install -Su xorg`
+* Alpine: `setup-xorg-base`
 
 Configuration
 *  Keyboard   clavier FR : 
