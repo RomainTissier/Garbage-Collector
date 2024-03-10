@@ -130,6 +130,8 @@ Lightweight env
     * `reboot`
 ### TODO
 #### Graphical interface
+* Install X server
+  * Debian `apt install xorg`
 #### Usb automount
 #### Disk management
 #### Webbrowser
