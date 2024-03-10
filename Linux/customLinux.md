@@ -168,6 +168,7 @@ Configuration:
 * VoidLinux: Activate USB automount by enabling service `ln -s /etc/sv/dbus /var/service/dbus`
 
 ### TODO
+#### Smart window split
 #### Disk management
 #### Webbrowser
 #### Clipboard
