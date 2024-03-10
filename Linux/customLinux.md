@@ -1,63 +1,26 @@
 Custom install of Linux
 =========================
-  Webbrowser
-  ------------
-    * links2 : minimal browser no javascript
-    * luakit : simple browser (interface like vim), handle simple javascript
-    * qutebrowser: simple browser (in python), handle simple javascript
-    * netsurf : very fast browser, no javascript
 
-  Install Jwm alpine
-  --------------------
-    * apk add jwm
-    * echo "exex jwm" > .xinitrc
-    * cp /etc/system.jwmrc .jwmrc
-    * apk install setxkbmap
+Webbrowser
+------------
+* links2 : minimal browser no javascript
+* luakit : simple browser (interface like vim), handle simple javascript
+* qutebrowser: simple browser (in python), handle simple javascript
+* netsurf : very fast browser, no javascript
 
-  Install Jwm
-  -------------
-    * `apt install jwm`
-    * `apt install xinit`
-    * `apt install stterm`
-    * `cp /etc/jwm/system.jwmrc .jwmrc`
-  
-  Try X and Jwm
-  ----------------
-    * `startx`
-    * Open terminal in order to execute setxkbmap fr
-  
-  Start wifi (nixos)
-  --------------------
-    * `sudo systemctl start wpa_supplicant`
-    * `wpa_cli`
-    * `scan`
-    * `add_network`
-        `-> 0`
-    * `set_network 0 ssid "MyWifi"`
-    * `set_network 0 psk "MyPassword"`
-
-  Configure keyboard (nixos)
-  ----------------------------
-    * `loadkeys fr`
-    * `enable_network 0`
-        -> CTRL-EVENT-CONNECTED
-  
-  Reminders / Notes on distro
-  -----------------------------
-    * NixOs: command line installation, simple wiki instruction, the configuration is handled by a text file: configuration.nix, package management too slow on very old computers
-    * Crux: the manual compilation of linux kernel is slow with very old hardware.
-
-Notes on void installation
-----------------------------
-* Activate USB automount by enabling service: `ln -s /etc/sv/dbus /var/service/dbus`
-
-
+Reminders / Notes on distro
+-----------------------------
+* NixOs: command line installation, simple wiki instruction, the configuration is handled by a text file: configuration.nix, package management too slow on very old computers
+* Crux: the manual compilation of linux kernel is slow with very old hardware.
 
 Lightweight env
 -----------------
 
 ### Basic distribution install
 Install minimal version of any distribution, without X server
+
+#### Configure keyboard
+Archlinux/Voidlinux/Nixos: `loadkeys fr`
 
 #### Configure partition (from nixos installation guide)
 * `parted /dev/sda -- mklabel msdos`
@@ -123,6 +86,16 @@ Install minimal version of any distribution, without X server
     * `reboot`
     * `nmtui`
     * `reboot`
+* wpa_supplicant (Wifi)
+  * Nixos
+    * `sudo systemctl start wpa_supplicant`
+    * `wpa_cli`
+    * `scan`
+    * `add_network`
+        `-> 0`
+    * `set_network 0 ssid "MyWifi"`
+    * `set_network 0 psk "MyPassword"`
+
 * Other manager
   * Alpine
     * During the installation : `setup-interfaces`
@@ -148,7 +121,8 @@ Install
 * Alpine: `setup-xorg-base`
 
 Configuration
-*  Keyboard   clavier FR : 
+* Manual keyboard conf: `setxkbmap be`
+* Auto Keyboard: 
   * Freebsd `/etc/X11/xorg.conf.d/10-keyboard0`:
     ```
     Section "InputClass"
@@ -173,9 +147,27 @@ Installation:
 Common configuration:
 * `echo "exec startlxqt" > ~/.xinitrc`
 
+#### JWM
+Install:
+* Alpine
+  * `apk add jwm`
+  * `apk install setxkbmap`
+* Debian
+  * `apt install jwm`
+
+Configuration:
+* `echo "exex jwm" > .xinitrc`
+* Copy .jwmrc
+  * `cp /etc/system.jwmrc .jwmrc` (Alpine)
+  * `cp /etc/jwm/system.jwmrc .jwmrc` (debian)
+
+#### Terminal
+* `apt install stterm`
+
+#### Usb automount
+* VoidLinux: Activate USB automount by enabling service `ln -s /etc/sv/dbus /var/service/dbus`
 
 ### TODO
-#### Usb automount
 #### Disk management
 #### Webbrowser
 #### Clipboard
