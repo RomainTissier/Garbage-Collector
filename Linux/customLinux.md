@@ -100,10 +100,7 @@ The order of package installation is very important:
 * 8: `xbps-install -Su lxqt`
 * Activate USB automount by enabling service: `ln -s /etc/sv/dbus /var/service/dbus`
 
-Xorg/11
----------
-* pacman -Syu xorg-server xf86-video-intel
-* pacman -Syu xorg-x11-xinit (provide startx)
+
 
 Lightweight env
 -----------------
@@ -134,12 +131,15 @@ Lightweight env
 
 ### Install X server
 * Debian `apt install xorg`
+* Archlinux (example with intel driver)
+  * `pacman -Syu xorg-server xf86-video-intel`
+  * `pacman -Syu xorg-x11-xinit (provide startx)`
 
 ### Desktop environment
-* LxQt
-  * Debian (too heavy):
-    * `apt install lxqt-core`
-    * `echo "exec startlxqt" > ~/.xinitrc`
+#### LxQt
+* Debian (too heavy):
+  * `apt install lxqt-core`
+  * `echo "exec startlxqt" > ~/.xinitrc`
 
 ### TODO
 #### Usb automount
