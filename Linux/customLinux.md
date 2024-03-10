@@ -160,6 +160,13 @@ Configuration:
 * Copy .jwmrc
   * `cp /etc/system.jwmrc .jwmrc` (Alpine)
   * `cp /etc/jwm/system.jwmrc .jwmrc` (debian)
+* Snap window (this behavior allow to resize window to the half of screen when user move it to screen edge) configuration in `.jwmrc`
+  ```
+  <Group>
+      <!-- <Option>tiled</Option> -->
+      <Option>aerosnap</Option>
+  </Group>
+  ```
 
 #### Terminal
 * `apt install stterm`
