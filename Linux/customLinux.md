@@ -136,9 +136,10 @@ Lightweight env
 * Debian `apt install xorg`
 
 ### Desktop environment
-* Debian (minimal install):
-  * `apt install lxqt-core`
-  * `echo "exec startlxqt" > ~/.xinitrc`
+* LxQt
+  * Debian (too heavy):
+    * `apt install lxqt-core`
+    * `echo "exec startlxqt" > ~/.xinitrc`
 
 ### TODO
 #### Usb automount
