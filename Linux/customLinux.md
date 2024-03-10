@@ -99,7 +99,15 @@ Lightweight env
 * Install minimal version of any distribution, without X server
 
 ### Command line editor
-* `apt install vim`
+* Installation:
+  * `apt install vim`
+* Configuration:
+  * .bashrc: `alias vi='vim'`
+  * .vimrc: `syntax on`  
+
+### Shell configuration
+* .bashrc or .shrc
+  * `alias ls='ls -G'`
 
 ### Update to latest version
 * Debian
@@ -109,6 +117,18 @@ Lightweight env
   * `apt update`
   * `apt dist-upgrade`
   * `reboot`
+* FreeBsd
+  * Update system 
+    * `freebsd-update fetch`
+    * `freebsd-update install`
+  * Upgrade system
+    * `freebsd-update -r 11.0-RELEASE upgrade`
+    * `freebsd-update install`
+    * `reboot`
+    * `freebsd-update install`
+  * Update packages
+    * `pkg update`
+    * `pkg upgrade`
 
 ### Network
 * NetworkManager (provide nmtui)
@@ -119,7 +139,8 @@ Lightweight env
     * `nmtui`
     * `reboot`
 
-### Install X server
+### X server
+Install
 * Debian `apt install xorg`
 * Archlinux (example with intel driver)
   * `pacman -Syu xorg-server xf86-video-intel`
@@ -133,6 +154,19 @@ Lightweight env
   * 6a: `xbps-install -Su libva-intel-driver` (warning: only for CPU before broadwell excluded)
   * 6b: `xbps-install -Su intel-media-driver` (after broadwell)
   * 7: `xbps-install -Su xorg`
+
+Configuration
+*  Keyboard   clavier FR : 
+  * Freebsd `/etc/X11/xorg.conf.d/10-keyboard0`:
+    `Section "InputClass"
+    	Identifier "Keyboard0"
+    	Driver "kbd"
+    	MatchIsKeyboard "on"
+    	Option "XkbModel" "pc105"
+    	Option "XkbRules" "xorg"
+    	Option "XkbLayout" "fr"
+    	Option "XkbVariant" "oss"`
+
 
 ### Desktop environment
 #### LxQt
