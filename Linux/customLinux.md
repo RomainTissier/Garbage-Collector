@@ -180,15 +180,14 @@ Configuration:
 #### Webbrowser
 * `apt install firefox-esr`
 
+#### Clipboard
+* Debian: N/A
+
 #### Sound
 * Debian
   * `apt install pulseaudio`
   * `apt install pamixer`
   * `apt install pavucontroll`
 
-### TODO
-#### Disk management
-#### Webbrowser
-#### Clipboard
-#### Sound
-#### Multi screen
+#### Multi-screen
+* Debian: `apt install arandr`
