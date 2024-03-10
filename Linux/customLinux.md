@@ -121,8 +121,13 @@ Lightweight env
   * `apt dist-upgrade`
   * `reboot`
 ### Network
-* NetworkManager
+* NetworkManager (provide nmtui)
   * Debian
+    * `apt install network-manager`
+    * Mannually edit `/etc/network/interface` to remove original config
+    * `reboot`
+    * `nmtui`
+    * `reboot`
 ### TODO
 #### Graphical interface
 #### Usb automount
