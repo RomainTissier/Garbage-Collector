@@ -108,6 +108,14 @@ Lightweight env
 ### Shell configuration
 * .bashrc or .shrc
   * `alias ls='ls -G'`
+  * Congigure PS1:
+    ```
+    PS1="whoami@hostname | sed 's/\..*//'"
+    case id -u in
+        0) PS1="${PS1}# ";;
+ 	      *) PS1="${PS1}$ ";;
+    esac
+    ```
 
 ### Update to latest version
 * Debian
@@ -158,14 +166,16 @@ Install
 Configuration
 *  Keyboard   clavier FR : 
   * Freebsd `/etc/X11/xorg.conf.d/10-keyboard0`:
-    `Section "InputClass"
+    ```
+    Section "InputClass"
     	Identifier "Keyboard0"
     	Driver "kbd"
     	MatchIsKeyboard "on"
     	Option "XkbModel" "pc105"
     	Option "XkbRules" "xorg"
     	Option "XkbLayout" "fr"
-    	Option "XkbVariant" "oss"`
+    	Option "XkbVariant" "oss"
+    ```
 
 
 ### Desktop environment
