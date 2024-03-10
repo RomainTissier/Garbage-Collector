@@ -110,8 +110,10 @@ Lightweight env
 
 ### Basic distribution install
 * Install minimal version of any distribution, without X server
+
 ### Command line editor
 * `apt install vim`
+
 ### Update to latest version
 * Debian
   * Edit `/etc/apt/source.list` and replace version code by `testing`
@@ -120,6 +122,7 @@ Lightweight env
   * `apt update`
   * `apt dist-upgrade`
   * `reboot`
+
 ### Network
 * NetworkManager (provide nmtui)
   * Debian
@@ -128,10 +131,16 @@ Lightweight env
     * `reboot`
     * `nmtui`
     * `reboot`
+
+### Install X server
+* Debian `apt install xorg`
+
+### Desktop environment
+* Debian (minimal install):
+  * `apt install lxqt-core`
+  * `echo "exec startlxqt" > ~/.xinitrc`
+
 ### TODO
-#### Graphical interface
-* Install X server
-  * Debian `apt install xorg`
 #### Usb automount
 #### Disk management
 #### Webbrowser
