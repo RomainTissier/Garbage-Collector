@@ -141,6 +141,7 @@ Installation:
   * `apt install lxqt-core`
 * VoidLinux
   * `xbps-install -Su lxqt`
+
 Common configuration:
 * `echo "exec startlxqt" > ~/.xinitrc`
 
