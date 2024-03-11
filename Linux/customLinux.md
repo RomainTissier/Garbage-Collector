@@ -78,7 +78,12 @@ Archlinux/Voidlinux/Nixos: `loadkeys fr`
     * `pkg update`
     * `pkg upgrade`
 * Alpine: source are configured in `/etc/apk/repositories`
-
+* OpenSuse:
+    * `zypper update`
+    * `zypper patch`
+    * `zypper patch-check`
+    * `zypper dup`
+  
 ### Network
 * NetworkManager (provide nmtui)
   * Debian
