@@ -14,6 +14,7 @@ Reminders / Notes on distro
 * Crux: the manual compilation of linux kernel is slow with very old hardware.
 * Debian (03/2024): minimal install (~150Mb of RAM) with JWM (~200Mb of RAM)
 * OpenSuse (03/2024): heavy installer, minimal install (~250Mb of RAM)
+* Fedora (03/2024): heavy installer
 
 Lightweight env
 -----------------
