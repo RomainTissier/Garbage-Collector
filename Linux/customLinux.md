@@ -16,7 +16,7 @@ Reminders / Notes on distro
 * OpenSuse (03/2024): heavy installer, minimal install (~250Mb of RAM)
 * Fedora (03/2024): heavy installer, basic install do not include wifi config, minimal install (~400Mb of RAM)
 * Archlinux (03/2024): archinstall cool installer, lxqt (~350Mb of RAM), cli (~160Mb)
-* Void-Linux (03/2024): cli (~120Mb of RAM)
+* Void-Linux (03/2024): cli (~120Mb of RAM) with JWM (~200Mb of RAM)
 * Windows xp: 150Mb of RAM
 
 Lightweight env
