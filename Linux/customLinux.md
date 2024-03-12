@@ -17,6 +17,7 @@ Reminders / Notes on distro
 * Fedora (03/2024): heavy installer, basic install do not include wifi config, minimal install (~400Mb of RAM)
 * Archlinux (03/2024): archinstall cool installer, lxqt (~350Mb of RAM), cli (~160Mb)
 * Void-Linux (03/2024): cli (~120Mb of RAM) with JWM (~200Mb of RAM)
+* Alpine (03/2024): cli (~100Mb of RAM)
 * Windows xp: 150Mb of RAM
 
 Lightweight env
