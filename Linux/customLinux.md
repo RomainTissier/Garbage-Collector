@@ -104,7 +104,13 @@ Archlinux/Voidlinux/Nixos: `loadkeys fr`
         `-> 0`
     * `set_network 0 ssid "MyWifi"`
     * `set_network 0 psk "MyPassword"`
-
+* iwctl
+  * Archlinux
+    * `iwctl`
+      * `device list`
+      * `station wlan0 scan`
+      * `station wlan0 get-networks`
+      * `station wlan0 connect BoxRomain` 
 * Other manager
   * Alpine
     * During the installation : `setup-interfaces`
