@@ -1,6 +1,10 @@
 Custom install of Linux
 =========================
+ xf86-input-libinput
+addgroup <username> input
 
+addgroup <username> video
+apk add font-terminus
 Webbrowser
 ------------
 * links2 : minimal browser no javascript
