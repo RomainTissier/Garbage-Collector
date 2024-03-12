@@ -15,6 +15,7 @@ Reminders / Notes on distro
 * Debian (03/2024): minimal install (~150Mb of RAM) with JWM (~200Mb of RAM)
 * OpenSuse (03/2024): heavy installer, minimal install (~250Mb of RAM)
 * Fedora (03/2024): heavy installer, basic install do not include wifi config, minimal install (~400Mb of RAM)
+* Archlinux (03/2024): archinstall cool installer, lxqt (~350Mb of RAM)
 * Windows xp: 150Mb of RAM
 
 Lightweight env
