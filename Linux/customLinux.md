@@ -182,6 +182,7 @@ Installation:
   * `apk add arandr` 
   * `apk add dbus`
   * `apk add dbus-x11`
+  * ? `dbus-uuidgen > /var/lib/dbus/machine-id` ?
   * `rc-update add dbus`
   * echo "exec dbus-launch startlxqt" > .xinitrc
 
