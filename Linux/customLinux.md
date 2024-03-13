@@ -1,10 +1,6 @@
 Custom install of Linux
 =========================
- xf86-input-libinput
-addgroup <username> input
 
-addgroup <username> video
-apk add font-terminus
 Webbrowser
 ------------
 * links2 : minimal browser no javascript
@@ -147,7 +143,12 @@ Install
   * 6a: `xbps-install -Su libva-intel-driver` (warning: only for CPU before broadwell excluded)
   * 6b: `xbps-install -Su intel-media-driver` (after broadwell)
   * 7: `xbps-install -Su xorg`
-* Alpine: `setup-xorg-base`
+* Alpine:
+  * `setup-xorg-base`
+  * `apk add xf86-input-libinput`
+  * `addgroup romain input`
+  * `addgroup romain video` 
+  * `apk add font-terminus`
 
 Configuration
 * Manual keyboard conf: `setxkbmap be`
