@@ -93,6 +93,12 @@ Archlinux/Voidlinux/Nixos: `loadkeys fr`
     * `zypper patch`
     * `zypper patch-check`
     * `zypper dup`
+* Netbsd:
+  * `PKG_PATH="http://cdn.NetBSD.org/pub/pkgsrc/packages/NetBSD/$(uname -p)/$(uname -r|cut -f '1 2' -d.)/All/"`
+  * `export PKG_PATH`
+  * `pkg_add pkgin`
+  * `pkgin update`
+  * `pkgin full-upgrade`
   
 ### Network
 * NetworkManager (provide nmtui)
@@ -176,6 +182,7 @@ Install:
   * `apk install setxkbmap`
 * Debian
   * `apt install jwm`
+* NetBsd: `pkgin install jwm` 
 
 Configuration:
 * `echo "exex jwm" > .xinitrc`
