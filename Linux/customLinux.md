@@ -173,6 +173,17 @@ Installation:
   * `apt install lxqt-core`
 * VoidLinux
   * `xbps-install -Su lxqt`
+* Alpine
+  * `apk add lxqt-desktop`
+  * `apk add lximage-qt`
+  * `apk add obconf-qt`
+  * `apk add pavucontrol-qt`
+  * `apk add screengrab`
+  * `apk add arandr` 
+  * `apk add dbus`
+  * `apk add dbus-x11`
+  * `rc-update add dbus`
+  * echo "exec dbus-launch startlxqt" > .xinitrc
 
 Common configuration:
 * `echo "exec startlxqt" > ~/.xinitrc`
@@ -207,7 +218,16 @@ Configuration:
 
 #### Usb automount
 * VoidLinux: Activate USB automount by enabling service `ln -s /etc/sv/dbus /var/service/dbus`
-
+* Alpine:
+  * `setup-devd udev`
+  * `apk add gvfs`
+  * `apk add udisks2`
+  * `apk add elogind`
+  * `apk add polkit-elogind`
+  * `rc-update add elogind`
+  * `addgroup -S yourusername users`
+  * `addgroup -S yourusername disk`  
+ 
 #### Webbrowser
 * `apt install firefox-esr`
 
@@ -219,6 +239,8 @@ Configuration:
   * `apt install pulseaudio`
   * `apt install pamixer`
   * `apt install pavucontroll`
+* Alpine
+  * `apk add pulseaudio` 
 
 #### Multi-screen
 * Debian: `apt install arandr`
