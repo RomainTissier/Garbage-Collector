@@ -151,8 +151,8 @@ Install
   * `apk add font-terminus`
 
 Configuration
-* Manual keyboard conf: `setxkbmap be`
-* Auto Keyboard: 
+* Dynamic keyboard configuration: `echo "setxkbmap be" > .xinitrc`
+* Manual Keyboard configuration: 
   * Freebsd `/etc/X11/xorg.conf.d/10-keyboard0`:
     ```
     Section "InputClass"
