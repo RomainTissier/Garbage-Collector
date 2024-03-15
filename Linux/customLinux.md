@@ -236,6 +236,15 @@ Configuration:
 * Set window frame style:
   * Rounded: `<WindowStyle>[..]<Corner>5</Corner>[..]</WindowStyle>`
   * Square: `<WindowStyle>[..]<Corner>0</Corner>[..]</WindowStyle>`
+* Configure right click menu:
+  ```
+  <RootMenu onroot="3">
+        <Program label="Files">pcmanfm</Program>
+        <Program icon="utilities-terminal" label="Terminal">xterm</Program>
+        <Separator/>
+        <Restart label="Restart" icon="reload"/>
+  </RootMenu>
+  ```
 
 #### Terminal
 * `apt install stterm`
