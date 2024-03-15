@@ -245,6 +245,7 @@ Configuration:
         <Restart label="Restart" icon="reload"/>
   </RootMenu>
   ```
+* Only display current desktop applications in task list: `<TaskListStyle list="desktop" group="true">` 
 
 #### Terminal
 * `apt install stterm`
