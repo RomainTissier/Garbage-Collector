@@ -210,7 +210,21 @@ Configuration:
       <Option>aerosnap</Option>
   </Group>
   ```
-
+* Configure menu command (default command `onroot="12"` means left or right click)
+  ```
+  <RootMenu onroot="a">
+      [...]
+  </RootMenu>
+    [...]
+  <TrayButton icon="/home/romain/.local/share/jwm/start.png">root:a</TrayButton>
+  ```
+* Configure window top bar with command icons:
+  ```
+  <ButtonClose>/home/romain/.local/share/jwm/btn_close.png</ButtonClose>
+  <ButtonMax>/home/romain/.local/share/jwm/btn_max.png</ButtonMax>
+  <ButtonMaxActive>/home/romain/.local/share/jwm/btn_max_active.png</ButtonMaxActive>
+  <ButtonMin>/home/romain/.local/share/jwm/btn_min.png</ButtonMin>
+  ```
 #### Terminal
 * `apt install stterm`
 
