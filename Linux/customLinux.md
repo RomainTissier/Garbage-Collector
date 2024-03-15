@@ -218,6 +218,12 @@ Configuration:
     [...]
   <TrayButton icon="/home/romain/.local/share/jwm/start.png">root:a</TrayButton>
   ```
+* Configure wallpaper image
+  ```
+  <Desktops width="4" height="1">
+        <Background type="image">/home/romain/.local/share/jwm/wallpaper.png</Background>
+  </Desktops>
+  ```
 * Configure window top bar with command icons:
   ```
   <ButtonClose>/home/romain/.local/share/jwm/btn_close.png</ButtonClose>
@@ -225,6 +231,12 @@ Configuration:
   <ButtonMaxActive>/home/romain/.local/share/jwm/btn_max_active.png</ButtonMaxActive>
   <ButtonMin>/home/romain/.local/share/jwm/btn_min.png</ButtonMin>
   ```
+* Remove "motif" 3D effect by replacing `decorations="motif"` by `decoration="flat"`
+* Remove opacity everywhere: `<Opacity>1.0</Opacity>`
+* Set window frame style:
+  * Rounded: `<WindowStyle>[..]<Corner>5</Corner>[..]</WindowStyle>`
+  * Square: `<WindowStyle>[..]<Corner>0</Corner>[..]</WindowStyle>`
+
 #### Terminal
 * `apt install stterm`
 
