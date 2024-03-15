@@ -14,6 +14,12 @@
         <Program label="Power Off">/usr/libexec/jwm/jwm-poweroff.sh</Program>
         <Exit label="Log Out" confirm="true" icon="exit"/>
     </RootMenu>
+    <RootMenu onroot="3">
+         <Program label="Files">pcmanfm</Program>
+        <Program icon="utilities-terminal" label="Terminal">xterm</Program>
+        <Separator/>
+        <Restart label="Restart" icon="reload"/>
+    </RootMenu>
 
     <!-- Options for program groups. -->
     <Group>
