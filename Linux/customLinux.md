@@ -96,6 +96,8 @@ Archlinux/Voidlinux/Nixos: `loadkeys fr`
   * `pkg_add pkgin`
   * `pkgin update`
   * `pkgin full-upgrade`
+* OpenBSD:
+  * pkg_add -u
   
 ### Network
 * NetworkManager (provide nmtui)
@@ -127,6 +129,7 @@ Archlinux/Voidlinux/Nixos: `loadkeys fr`
     * Restart network service : `/etc/init.d/networking restart`
     * Increase retry (10 times) to connect wifi : 
       * - In `/etc/network/interfaces` add : `udhcpc_opts -t 10`
+  * OpenBSD
 
 ### X server
 Install
@@ -246,6 +249,10 @@ Configuration:
   </RootMenu>
   ```
 * Only display current desktop applications in task list: `<TaskListStyle list="desktop" group="true">` 
+
+* Configure shutdown on Openbsd:
+  * `# shutdown -p now`
+  * `# halt -p`
 
 #### Terminal
 * `apt install stterm`
