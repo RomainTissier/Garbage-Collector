@@ -130,7 +130,16 @@ Archlinux/Voidlinux/Nixos: `loadkeys fr`
     * Increase retry (10 times) to connect wifi : 
       * - In `/etc/network/interfaces` add : `udhcpc_opts -t 10`
   * OpenBSD
-
+    * ifconfig -a
+    * ifconfig wpi0 up
+    * ifoncifg wpi0 scan
+    * vim /etc/hostname.wpi0
+       ```
+       nwid "MySSID"
+       wpakey "MyPassword"
+       inet autoconf
+       ```
+    * reboot 
 ### X server
 Install
 * Debian `apt install xorg`
